@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKMD Shopping</title>
+    <style>
+        
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .header{
+            height: 70px;
+            width: 100%;
+            background-color: lightpink;
+            line-height: 70px;
+        }
+        
+        h1{
+            margin-left: 5%;
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+        }
+        .search{
+            height: 70px;
+            width: 60%;
+            /* background-color: rgb(146, 165, 146); */
+            display: inline-block;
+        }
+
+        .search input{
+            height: 40px;
+            width: 100%;
+            text-indent: 20px;
+            border-radius: 5px;
+            /* border: 1px rgb(125, 134, 129) 134, 129); */
+            outline: none;
+        }
+
+        .products{
+            width: 100%;
+            height: auto;
+            /* background-color: slategrey; */
+
+        }
+         .productwrapper{
+             height: auto;
+             width: 80%;
+             background-color: rgb(238, 238, 238);
+             margin-left: 10%;
+             margin-bottom: 50px;
+         }
+        .product{
+            height: auto;
+            width: 25%;
+             display: inline-block;
+             margin-top: 25px;
+             margin-left: 6.25%;
+             border: 1px solid gray;
+        }
+        .prodimg{
+            height: 300px;
+            width: 100%;
+            /* background-color: cornflowerblue; */
+            overflow: hidden;
+        }
+        .product h3,
+         .product p {
+            padding: 5px;
+            padding-left: 10px;
+
+        }
+        .product p{
+            color:rgb(51, 20, 190);
+        }
+        button{
+            padding: 10px;
+        }
+        .filter h4{
+            text-align: left;
+            margin-left: 25%;
+            padding-top: 10px;
+            padding-bottom: 20px;
+         }
+         .filter input{
+             margin: 5px;
+             height: 30px;
+             width: 500;
+             text-indent: 20px;
+             border: 1px solid gray;
+             border-radius: 10px;
+             outline: none;
+         }
+        .cart{
+             text-align: center;
+             margin-bottom: 20px;
+             font-size: 150%;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AKMD Shopping</h1>
+        <div class="search">
+            <input 
+            type="search"
+            onkeyup="searchProduct(this.value)" 
+            placeholder="search for products"/></div>
+    </div>
+    
+<br>
+           
+
+            <div class="filter">  <center>
+                <h3><u>Filter By Price</u>
+                <input 
+                type="search" 
+                placeholder="Minimum Price" 
+                id="min"
+                onkeyup="filterSearch()"
+                />
+
+                <input 
+                type="search" 
+                placeholder="Maximum Price" 
+                id="max"
+                onkeyup="filterSearch()"
+                />
+                <button onclick="searchBy()">filter</button>
+
+               </h3> </center></div>
+<br>
+
+            <div class="cart" >
+                <h>Cart : </h>
+                <h class="productwrapper" id="count">0</h>
+            </div>
+            <br>
+            <div class="products">
+                <div class="productwrapper" id="productwrapper">
+                </div>
+        
+                <div class="products">
+                    <h1><u>cart:</u></h1>
+                    <div class="productwrapper" id="cart">
+                    </div>
+    </div>
+
+    <script src="Day8.js"></script>
+</body>
+</html>
